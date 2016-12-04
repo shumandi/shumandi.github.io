@@ -1,0 +1,703 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="css构造块&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt;[TOC]
+构造样式规则为样式规则添加注释/****/
+继承如果子元素中没有定义特殊的样式，那么它会继承父元素中的某些样式。
+会继承的样式：
+123456789101112131415161718192021222324252627282930313233">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html5andcss3base/07">
+<meta property="og:url" content="https://shumandi.github.io/2016/12/04/html5andcss3base-07/index.html">
+<meta property="og:site_name" content="随意一点的blog">
+<meta property="og:description" content="css构造块&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt;[TOC]
+构造样式规则为样式规则添加注释/****/
+继承如果子元素中没有定义特殊的样式，那么它会继承父元素中的某些样式。
+会继承的样式：
+123456789101112131415161718192021222324252627282930313233">
+<meta property="og:updated_time" content="2016-12-04T06:51:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html5andcss3base/07">
+<meta name="twitter:description" content="css构造块&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt;[TOC]
+构造样式规则为样式规则添加注释/****/
+继承如果子元素中没有定义特殊的样式，那么它会继承父元素中的某些样式。
+会继承的样式：
+123456789101112131415161718192021222324252627282930313233">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shumandi.github.io/2016/12/04/html5andcss3base-07/"/>
+
+
+
+
+
+  <title> html5andcss3base/07 | 随意一点的blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">随意一点的blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">学习笔记吧。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://shumandi.github.io/2016/12/04/html5andcss3base-07/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="舒漫的">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="随意一点的blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="随意一点的blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                html5andcss3base/07
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-04T14:48:06+08:00">
+                2016-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5andcss3base/" itemprop="url" rel="index">
+                    <span itemprop="name">html5andcss3base</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="css构造块-lt-link-rel-quot-stylesheet-quot-href-quot-style-css-quot-gt"><a href="#css构造块-lt-link-rel-quot-stylesheet-quot-href-quot-style-css-quot-gt" class="headerlink" title="css构造块&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;"></a>css构造块<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></h1><p>[TOC]</p>
+<h2 id="构造样式规则"><a href="#构造样式规则" class="headerlink" title="构造样式规则"></a>构造样式规则</h2><h2 id="为样式规则添加注释"><a href="#为样式规则添加注释" class="headerlink" title="为样式规则添加注释"></a>为样式规则添加注释</h2><p><code>/****/</code></p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>如果子元素中没有定义特殊的样式，那么它会继承父元素中的某些样式。</p>
+<p>会继承的样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">1. 文本</div><div class="line"> * color (a元素除外)</div><div class="line"> * direction 方向</div><div class="line"> * font</div><div class="line"> * font-family 字体系列</div><div class="line"> * font-size 字体大小</div><div class="line"> * font-style 设置斜体</div><div class="line"> * font-variant 设置小型大写字体</div><div class="line"> * font-weight 粗体</div><div class="line"> * letter-spacing 字母间距</div><div class="line"> * line-height 行高</div><div class="line"> * text-align 字体对其方式</div><div class="line"> * text-indent 首行缩进</div><div class="line"> * text-transform 大小写转换</div><div class="line"> * visibility 可见性</div><div class="line"> * white-space 如何处理空格</div><div class="line"> * word-spacing 词间距</div><div class="line">2. 列表</div><div class="line"> * list-style 列表样式</div><div class="line"> * list-style-image 制定列表标记</div><div class="line"> * list-style-position 指定标记位置</div><div class="line"> * list-style-type 指定标记的类型</div><div class="line">3. 表格</div><div class="line"> * border-collapse 用于控制相邻的两个边框是否合并</div><div class="line"> * border-spacing 用于控制边框之间距离大小</div><div class="line"> * caption-side 表头位置</div><div class="line"> * empty-cells 是否显示表格中的空单元格</div><div class="line">4. 页面设置 （用于印刷物）</div><div class="line"> * orphans 用于设置当前元素内部发生分页时在底部保留行数</div><div class="line"> * page-break-inside 设置元素内部分页模式</div><div class="line"> * widows 设置元素发生分页时顶部保留行数</div><div class="line">5. 其他</div><div class="line"> * cursor 鼠标指针</div><div class="line"> * quotes 引号样式</div></pre></td></tr></table></figure>
+<h2 id="层叠：当规则发生冲突时"><a href="#层叠：当规则发生冲突时" class="headerlink" title="层叠：当规则发生冲突时"></a>层叠：当规则发生冲突时</h2><p>推荐使用外部样式表</p>
+<p>内连：在元素style属性中设置样式</p>
+<p>外部引用文件可以出现在page任意位置，但推荐倒入到head中。</p>
+<h3 id="特殊性"><a href="#特殊性" class="headerlink" title="特殊性"></a>特殊性</h3><p>选择器越特殊，规则就越强，在选择时就越会优先考虑。</p>
+<p>id&gt;class&gt;element</p>
+<h3 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h3><p>当特殊性无法区分时，在后面出现的选择器会有更加强的规则。</p>
+<h3 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h3><p>当以上两种都无法确定时使用!important 来声明这条属性的重要性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">  <span class="attribute">color</span>:red <span class="meta">!important</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>不管样式出现在任何地方，他们首先比较的时重要性，当无法区分的时候才使用顺序方式来判定。内连为最高规则。但是important可以打破这一条规则。</p>
+<h2 id="属性的值"><a href="#属性的值" class="headerlink" title="属性的值"></a>属性的值</h2><p>虽然属性能接受的值的类型各不相同，但是有一些比较特殊的值类型。</p>
+<h3 id="inherit"><a href="#inherit" class="headerlink" title="inherit"></a>inherit</h3><p>这个值用来继承父元素的属性的值<code>color: inherit;</code>，这样元素久继承了父元素的color属性。</p>
+<h3 id="预定义的值"><a href="#预定义的值" class="headerlink" title="预定义的值"></a>预定义的值</h3><p>例如left，right，none这些值都不需要用双引号修饰。</p>
+<p>但是大多数的值都不需要用双引号包裹起来。</p>
+<h3 id="长度和百分数"><a href="#长度和百分数" class="headerlink" title="长度和百分数"></a>长度和百分数</h3><p>长度单位为px，百分数使用%</p>
+<p>em单位的大小由元素内的字体的大小决定nem表示字体的n倍。</p>
+<p>0一般不带单位。</p>
+<h3 id="纯数字"><a href="#纯数字" class="headerlink" title="纯数字"></a>纯数字</h3><p>只有极少数属性接受纯数字：line-height，z-index，opacity等。</p>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p><code>background: url(bg.png);</code></p>
+<h3 id="css颜色"><a href="#css颜色" class="headerlink" title="css颜色"></a>css颜色</h3><p><code>rgb(89,9,123)</code></p>
+<p><code>rgb(12%,24%,8%)</code></p>
+<p><code>#ffffff</code></p>
+<p>如果颜色由三对重复值出现<code>#f73</code> === <code>#ff7733</code></p>
+<p>以上都表示rgb颜色值</p>
+<p>其他颜色：</p>
+<ul>
+<li>RGBA <code>rgba(33,55,66,0.12)</code> 最后一位表示透明度</li>
+<li>HSL 色相hue，饱和度saturation， 亮度lightness。hue取值范围0～360，饱和度取值范围为0～100%。<code>property: hsl(hue, saturation, lightness)</code>  <code>color: hsl(33,45%,56%)</code></li>
+<li>HSLA <code>property: hsla(hue, saturation, lightness, alpha transparency)</code></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/04/html5andcss3base-06/" rel="next" title="html5andcss3base/06">
+                <i class="fa fa-chevron-left"></i> html5andcss3base/06
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/04/html5andcss3base-08/" rel="prev" title="html5andcss3base/08">
+                html5andcss3base/08 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="舒漫的" />
+          <p class="site-author-name" itemprop="name">舒漫的</p>
+          <p class="site-description motion-element" itemprop="description">副标题的简介是在不明白</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shumandi" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css构造块-lt-link-rel-quot-stylesheet-quot-href-quot-style-css-quot-gt"><span class="nav-number">1.</span> <span class="nav-text">css构造块<link rel="stylesheet" href="style.css"></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构造样式规则"><span class="nav-number">1.1.</span> <span class="nav-text">构造样式规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为样式规则添加注释"><span class="nav-number">1.2.</span> <span class="nav-text">为样式规则添加注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承"><span class="nav-number">1.3.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层叠：当规则发生冲突时"><span class="nav-number">1.4.</span> <span class="nav-text">层叠：当规则发生冲突时</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊性"><span class="nav-number">1.4.1.</span> <span class="nav-text">特殊性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序"><span class="nav-number">1.4.2.</span> <span class="nav-text">顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要性"><span class="nav-number">1.4.3.</span> <span class="nav-text">重要性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.4.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性的值"><span class="nav-number">1.5.</span> <span class="nav-text">属性的值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#inherit"><span class="nav-number">1.5.1.</span> <span class="nav-text">inherit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预定义的值"><span class="nav-number">1.5.2.</span> <span class="nav-text">预定义的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长度和百分数"><span class="nav-number">1.5.3.</span> <span class="nav-text">长度和百分数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#纯数字"><span class="nav-number">1.5.4.</span> <span class="nav-text">纯数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL"><span class="nav-number">1.5.5.</span> <span class="nav-text">URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css颜色"><span class="nav-number">1.5.6.</span> <span class="nav-text">css颜色</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">舒漫的</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="定义选择器选择器 决定将格式引用到哪些区域
+声明 决定如何显示元素
+构造选择器
+元素的类型或名称 class
+元素的上下文 body p （body元素里面的p）
+元素的id
+元素的伪类或伪元素。
+元素是否有某些属性或者值。
+
+按名称选择元素*通配符匹配所有元素名称。
+使用一组元素选择器时，因该使用逗号分隔开，不然会变成上下文选择器。
+按类或者id选择.class
+#id
+h1.news只会影响c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html5andcss3base/09">
+<meta property="og:url" content="https://shumandi.github.io/2016/12/04/html5andcss3base-09/index.html">
+<meta property="og:site_name" content="随意一点的blog">
+<meta property="og:description" content="定义选择器选择器 决定将格式引用到哪些区域
+声明 决定如何显示元素
+构造选择器
+元素的类型或名称 class
+元素的上下文 body p （body元素里面的p）
+元素的id
+元素的伪类或伪元素。
+元素是否有某些属性或者值。
+
+按名称选择元素*通配符匹配所有元素名称。
+使用一组元素选择器时，因该使用逗号分隔开，不然会变成上下文选择器。
+按类或者id选择.class
+#id
+h1.news只会影响c">
+<meta property="og:updated_time" content="2016-12-04T06:52:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html5andcss3base/09">
+<meta name="twitter:description" content="定义选择器选择器 决定将格式引用到哪些区域
+声明 决定如何显示元素
+构造选择器
+元素的类型或名称 class
+元素的上下文 body p （body元素里面的p）
+元素的id
+元素的伪类或伪元素。
+元素是否有某些属性或者值。
+
+按名称选择元素*通配符匹配所有元素名称。
+使用一组元素选择器时，因该使用逗号分隔开，不然会变成上下文选择器。
+按类或者id选择.class
+#id
+h1.news只会影响c">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shumandi.github.io/2016/12/04/html5andcss3base-09/"/>
+
+
+
+
+
+  <title> html5andcss3base/09 | 随意一点的blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">随意一点的blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">学习笔记吧。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://shumandi.github.io/2016/12/04/html5andcss3base-09/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="舒漫的">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="随意一点的blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="随意一点的blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                html5andcss3base/09
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-04T14:48:14+08:00">
+                2016-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5andcss3base/" itemprop="url" rel="index">
+                    <span itemprop="name">html5andcss3base</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="定义选择器"><a href="#定义选择器" class="headerlink" title="定义选择器"></a>定义选择器</h1><p><strong>选择器</strong> 决定将格式引用到哪些区域</p>
+<p><strong>声明</strong> 决定如何显示元素</p>
+<h2 id="构造选择器"><a href="#构造选择器" class="headerlink" title="构造选择器"></a>构造选择器</h2><ul>
+<li>元素的类型或名称 class</li>
+<li>元素的上下文 body p （body元素里面的p）</li>
+<li>元素的id</li>
+<li>元素的伪类或伪元素。</li>
+<li>元素是否有某些属性或者值。</li>
+</ul>
+<h2 id="按名称选择元素"><a href="#按名称选择元素" class="headerlink" title="按名称选择元素"></a>按名称选择元素</h2><p>*通配符匹配所有元素名称。</p>
+<p>使用一组元素选择器时，因该使用逗号分隔开，不然会变成上下文选择器。</p>
+<h2 id="按类或者id选择"><a href="#按类或者id选择" class="headerlink" title="按类或者id选择"></a>按类或者id选择</h2><p>.class</p>
+<p>#id</p>
+<p>h1.news只会影响class伪news的h1元素</p>
+<p>尽量不要使用id选择器，id权重太大。</p>
+<p>.aaa.bbb与.aaa .bbb不同，前者会选择包含aaa和bbb的所有元素，后者有空号，那么选择的是aaa所在元素中的bbb表示的元素。</p>
+<h2 id="按上下文选择元素"><a href="#按上下文选择元素" class="headerlink" title="按上下文选择元素"></a>按上下文选择元素</h2><p><strong>祖先</strong> 包含的 <strong>后代</strong> 不管相隔多少代，都会包含进去</p>
+<p><code>Body p{}</code> body元素为祖先 p为后代，不管p包含在任何元素中，只要在body中，那么久会匹配选择器中的声明。</p>
+<p><code>parent &gt; p</code>只会选择parent元素或者其他的直接子元素p。</p>
+<p><strong>相邻同胞选择符</strong> <code>parent p+p</code> 这个选择器只会选择parent元素下的 p元素后跟随的p元素。</p>
+<h2 id="第一个或者最后一个子元素选择器"><a href="#第一个或者最后一个子元素选择器" class="headerlink" title="第一个或者最后一个子元素选择器"></a>第一个或者最后一个子元素选择器</h2><p><code>:first-child</code> <code>:last-child</code> </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:first-child</span>&#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:last-child</span>&#123;</div><div class="line">  <span class="attribute">color</span>: blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上的选择器会选择li的父元素中的第一个li和最后一个li元素。</p>
+<p><code>.archit li:first-child</code> 对class为archit的元素中的第一个li选择。</p>
+<h2 id="选择元素的第一个字母和第一行"><a href="#选择元素的第一个字母和第一行" class="headerlink" title="选择元素的第一个字母和第一行"></a>选择元素的第一个字母和第一行</h2><p><code>:first-letter</code> <code>:first-line</code></p>
+<p>第一个字母前的符号会被一同包含在第一个字母中，ie8以下除外。</p>
+<h2 id="伪元素，伪类"><a href="#伪元素，伪类" class="headerlink" title="伪元素，伪类"></a>伪元素，伪类</h2><p>在css中伪元素使用两个冒号链接<code>::first-line</code> <code>::first-letter</code> <code>::before</code> <code>::after</code>这四个元素作为css3中的伪元素。</p>
+<p>伪类使用一个冒号声明。例如<code>:first-child</code></p>
+<h2 id="按状态选择元素"><a href="#按状态选择元素" class="headerlink" title="按状态选择元素"></a>按状态选择元素</h2><ul>
+<li><p>link 没有被激活状态</p>
+</li>
+<li><p>visited 已经激活</p>
+</li>
+<li><p>focus 焦点时，（键盘选择并准备激活)</p>
+</li>
+<li><p>hover 鼠标进入元素时</p>
+</li>
+<li><p>active 激活过后</p>
+<p>以上的定义顺序也是当发生冲突时的优先级顺序</p>
+</li>
+</ul>
+<p><code>a{color: red}</code>会将a的所有状态的字体颜色变为红色</p>
+<h2 id="按属性或属性值选择"><a href="#按属性或属性值选择" class="headerlink" title="按属性或属性值选择"></a>按属性或属性值选择</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[class]</span>&#123;</div><div class="line">  <span class="attribute">color</span>:red</div><div class="line">&#125;<span class="comment">/*选择所有具有class属性的值*／</span></div></pre></td></tr></table></figure>
+<p>值选择方式：</p>
+<ul>
+<li><code>=&quot;value&quot;</code> 等于value</li>
+<li><code>~=&quot;value&quot;</code> 包含value这个单词，value表示一个完整单词</li>
+<li><code>|=&quot;value&quot;</code> 以value-开头</li>
+<li><code>^=&quot;value&quot;</code> 以value开头</li>
+<li><code>$=&quot;value&quot;</code> 以value结尾</li>
+<li><code>*=&quot;value&quot;</code> 包含value一次或者多次，不强制要求是一个单词。</li>
+</ul>
+<p>选择包含多个属性的元素<code>p[class][onclick]</code></p>
+<h2 id="指定元素组"><a href="#指定元素组" class="headerlink" title="指定元素组"></a>指定元素组</h2><p>用逗号分隔每个元素，同时设置这些元素的样式</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/04/html5andcss3base-08/" rel="next" title="html5andcss3base/08">
+                <i class="fa fa-chevron-left"></i> html5andcss3base/08
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/04/html5andcss3base-10/" rel="prev" title="html5andcss3base/10">
+                html5andcss3base/10 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="舒漫的" />
+          <p class="site-author-name" itemprop="name">舒漫的</p>
+          <p class="site-description motion-element" itemprop="description">副标题的简介是在不明白</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shumandi" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#定义选择器"><span class="nav-number">1.</span> <span class="nav-text">定义选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构造选择器"><span class="nav-number">1.1.</span> <span class="nav-text">构造选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按名称选择元素"><span class="nav-number">1.2.</span> <span class="nav-text">按名称选择元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按类或者id选择"><span class="nav-number">1.3.</span> <span class="nav-text">按类或者id选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按上下文选择元素"><span class="nav-number">1.4.</span> <span class="nav-text">按上下文选择元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一个或者最后一个子元素选择器"><span class="nav-number">1.5.</span> <span class="nav-text">第一个或者最后一个子元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择元素的第一个字母和第一行"><span class="nav-number">1.6.</span> <span class="nav-text">选择元素的第一个字母和第一行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪元素，伪类"><span class="nav-number">1.7.</span> <span class="nav-text">伪元素，伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按状态选择元素"><span class="nav-number">1.8.</span> <span class="nav-text">按状态选择元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按属性或属性值选择"><span class="nav-number">1.9.</span> <span class="nav-text">按属性或属性值选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指定元素组"><span class="nav-number">1.10.</span> <span class="nav-text">指定元素组</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">舒漫的</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -84,16 +84,49 @@
 
 
 
-<meta name="description" content="没有什么可以奇怪的，这就是第一篇文章">
+<meta name="description" content="构建响应式网站概述响应式网站的组成
+灵活的图像和媒体
+灵活的、基于网格的布局（流式布局）：所有的width都用%设置，其他水平单位通常使用em。
+媒体查询：可以根据媒体特征对设计进行调整。
+
+创建可伸缩图像步骤：
+
+img标签省略width和height属性。
+在css中为每个图片应用max-width: 100%
+
+width：100%可能使图片拉伸。
+background-size可以对背景图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first blog">
-<meta property="og:url" content="https://shumandi.github.io/2016/12/04/first-blog/index.html">
+<meta property="og:title" content="html5andcss3base/12">
+<meta property="og:url" content="https://shumandi.github.io/2016/12/04/html5andcss3base-12/index.html">
 <meta property="og:site_name" content="随意一点的blog">
-<meta property="og:description" content="没有什么可以奇怪的，这就是第一篇文章">
-<meta property="og:updated_time" content="2016-12-04T04:23:16.000Z">
+<meta property="og:description" content="构建响应式网站概述响应式网站的组成
+灵活的图像和媒体
+灵活的、基于网格的布局（流式布局）：所有的width都用%设置，其他水平单位通常使用em。
+媒体查询：可以根据媒体特征对设计进行调整。
+
+创建可伸缩图像步骤：
+
+img标签省略width和height属性。
+在css中为每个图片应用max-width: 100%
+
+width：100%可能使图片拉伸。
+background-size可以对背景图">
+<meta property="og:updated_time" content="2016-12-04T06:54:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first blog">
-<meta name="twitter:description" content="没有什么可以奇怪的，这就是第一篇文章">
+<meta name="twitter:title" content="html5andcss3base/12">
+<meta name="twitter:description" content="构建响应式网站概述响应式网站的组成
+灵活的图像和媒体
+灵活的、基于网格的布局（流式布局）：所有的width都用%设置，其他水平单位通常使用em。
+媒体查询：可以根据媒体特征对设计进行调整。
+
+创建可伸缩图像步骤：
+
+img标签省略width和height属性。
+在css中为每个图片应用max-width: 100%
+
+width：100%可能使图片拉伸。
+background-size可以对背景图">
 
 
 
@@ -121,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="https://shumandi.github.io/2016/12/04/first-blog/"/>
+  <link rel="canonical" href="https://shumandi.github.io/2016/12/04/html5andcss3base-12/"/>
 
 
 
 
 
-  <title> first blog | 随意一点的blog </title>
+  <title> html5andcss3base/12 | 随意一点的blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +291,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://shumandi.github.io/2016/12/04/first-blog/">
+  <link itemprop="mainEntityOfPage" href="https://shumandi.github.io/2016/12/04/html5andcss3base-12/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="舒漫的">
@@ -282,7 +315,7 @@
             
             
               
-                first blog
+                html5andcss3base/12
               
             
           </h1>
@@ -295,7 +328,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-04T02:34:25+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-04T14:48:25+08:00">
                 2016-12-04
               </time>
             
@@ -349,7 +382,55 @@
       
 
       
-        <p>没有什么可以奇怪的，这就是第一篇文章</p>
+        <h1 id="构建响应式网站"><a href="#构建响应式网站" class="headerlink" title="构建响应式网站"></a>构建响应式网站</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="响应式网站的组成"><a href="#响应式网站的组成" class="headerlink" title="响应式网站的组成"></a>响应式网站的组成</h3><ul>
+<li>灵活的图像和媒体</li>
+<li>灵活的、基于网格的布局（流式布局）：所有的width都用%设置，其他水平单位通常使用em。</li>
+<li>媒体查询：可以根据媒体特征对设计进行调整。</li>
+</ul>
+<h2 id="创建可伸缩图像"><a href="#创建可伸缩图像" class="headerlink" title="创建可伸缩图像"></a>创建可伸缩图像</h2><p>步骤：</p>
+<ol>
+<li>img标签省略width和height属性。</li>
+<li>在css中为每个图片应用<code>max-width: 100%</code></li>
+</ol>
+<p>width：100%可能使图片拉伸。</p>
+<p><code>background-size</code>可以对背景图片进行缩放。</p>
+<p>可以使用<code>video, embed, object{ max-width: 100%}</code> 对其他媒体进行伸缩。</p>
+<h2 id="创建弹性布局网格"><a href="#创建弹性布局网格" class="headerlink" title="创建弹性布局网格"></a>创建弹性布局网格</h2><p>对于每一个元素，确定好它相对于父元素所需要的width的百分比。</p>
+<p>对于root元素，使用max-width：960px 使它可以随不同屏幕改变而改变。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.page</span>&#123;</div><div class="line">  <span class="attribute">max-width</span>: <span class="number">960px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.main</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">62.5%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.sidebar</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">31.25%</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Max-width: 60em 可以达到相同的效果。</p>
+<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><p>媒体查询可用的设置：</p>
+<ul>
+<li>width 宽度</li>
+<li>height 高度</li>
+<li>device-width 设备宽度</li>
+<li>device-height 设备高度</li>
+<li>orientation 方向</li>
+<li>aspect-ratio 高宽比</li>
+<li>device-aspect-ratio 设备高宽比</li>
+<li>color 颜色</li>
+<li>color-index 颜色数</li>
+<li>monochrome 单色</li>
+<li>resolution 分辨率</li>
+<li>scan 扫描</li>
+<li>grid 栅格</li>
+</ul>
+<p>除了orientation，scan，grid外都有min和max前缀。</p>
+<p>两种声明媒体查询方式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">'stylesheet'</span> <span class="attr">media</span>=<span class="string">'logic type and (feature: value)'</span> <span class="attr">href</span>=<span class="string">'your-stylesheet.css'</span> /&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> logic type and (feature: value)&#123;&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li><em>logic</em>: 可选值为noly或not only确保久浏览器不读取余下媒体查询，not表否定，例如<code>not screen</code>表示处screen意外设备应用这个样式表。</li>
+<li><em>type</em> : 媒体类型，例如screen，print。</li>
+<li><em>feature：value</em>：可选，可使用多个，但每个必须单独的存在于（）中，且必需出现在and之后。</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#media</span> <span class="selector-tag">not</span> <span class="selector-tag">print</span> <span class="selector-tag">and</span> (<span class="selector-tag">min-width</span>: 480<span class="selector-tag">px</span>) <span class="selector-tag">and</span> (<span class="selector-tag">max-width</span>: 767<span class="selector-tag">px</span>)&#123;&#125;</div></pre></td></tr></table></figure>
+<p><strong>媒体查询中使用em，相对的，在所有响应式设计中尽量不使用px这样的绝对单位。</strong> </p>
+<h2 id="理解视觉区域和视觉区域的meta元素"><a href="#理解视觉区域和视觉区域的meta元素" class="headerlink" title="理解视觉区域和视觉区域的meta元素"></a>理解视觉区域和视觉区域的meta元素</h2><p>width表示视觉区域（viewport）的宽度，也就是浏览器的宽度。</p>
+<p>device-width是设备的屏幕宽度。</p>
+<p>而在iphone中视觉区域被设置成为980px，所以不能直接使用width来判断屏幕。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p>这段代码可以减小误差。</p>
 
       
     </div>
@@ -376,14 +457,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/12/04/html5andcss3base-11/" rel="next" title="html5andcss3base/11">
+                <i class="fa fa-chevron-left"></i> html5andcss3base/11
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/04/categoriespost/" rel="prev" title="categoriespost">
-                categoriespost <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/04/html5andcss3base-13/" rel="prev" title="html5andcss3base/13">
+                html5andcss3base/13 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -431,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -443,7 +537,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -451,7 +545,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -489,6 +583,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#构建响应式网站"><span class="nav-number">1.</span> <span class="nav-text">构建响应式网站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式网站的组成"><span class="nav-number">1.1.1.</span> <span class="nav-text">响应式网站的组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建可伸缩图像"><span class="nav-number">1.2.</span> <span class="nav-text">创建可伸缩图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建弹性布局网格"><span class="nav-number">1.3.</span> <span class="nav-text">创建弹性布局网格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#媒体查询"><span class="nav-number">1.4.</span> <span class="nav-text">媒体查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#理解视觉区域和视觉区域的meta元素"><span class="nav-number">1.5.</span> <span class="nav-text">理解视觉区域和视觉区域的meta元素</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

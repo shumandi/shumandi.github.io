@@ -1,0 +1,744 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="为文本添加样式[TOC]
+选择字体系列font-family: name
+包含多个单词的字体因该用引号。
+字体名可以全为小写
+select，textarea，inport不会继承父元素中的字体定义。可以使用select, textarea, inport{font-family:inherit};显示的继承。
+指定替换字体字体栈 font stack 一般包含三种字体，当第一个字体在系统中没有找到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html5andcss3base/10">
+<meta property="og:url" content="https://shumandi.github.io/2016/12/04/html5andcss3base-10/index.html">
+<meta property="og:site_name" content="随意一点的blog">
+<meta property="og:description" content="为文本添加样式[TOC]
+选择字体系列font-family: name
+包含多个单词的字体因该用引号。
+字体名可以全为小写
+select，textarea，inport不会继承父元素中的字体定义。可以使用select, textarea, inport{font-family:inherit};显示的继承。
+指定替换字体字体栈 font stack 一般包含三种字体，当第一个字体在系统中没有找到">
+<meta property="og:updated_time" content="2016-12-04T06:53:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html5andcss3base/10">
+<meta name="twitter:description" content="为文本添加样式[TOC]
+选择字体系列font-family: name
+包含多个单词的字体因该用引号。
+字体名可以全为小写
+select，textarea，inport不会继承父元素中的字体定义。可以使用select, textarea, inport{font-family:inherit};显示的继承。
+指定替换字体字体栈 font stack 一般包含三种字体，当第一个字体在系统中没有找到">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shumandi.github.io/2016/12/04/html5andcss3base-10/"/>
+
+
+
+
+
+  <title> html5andcss3base/10 | 随意一点的blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">随意一点的blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">学习笔记吧。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://shumandi.github.io/2016/12/04/html5andcss3base-10/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="舒漫的">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="随意一点的blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="随意一点的blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                html5andcss3base/10
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-04T14:48:18+08:00">
+                2016-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5andcss3base/" itemprop="url" rel="index">
+                    <span itemprop="name">html5andcss3base</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="为文本添加样式"><a href="#为文本添加样式" class="headerlink" title="为文本添加样式"></a>为文本添加样式</h1><p>[TOC]</p>
+<h2 id="选择字体系列"><a href="#选择字体系列" class="headerlink" title="选择字体系列"></a>选择字体系列</h2><p><code>font-family: name</code></p>
+<p>包含多个单词的字体因该用引号。</p>
+<p>字体名可以全为小写</p>
+<p>select，textarea，inport不会继承父元素中的字体定义。可以使用<code>select, textarea, inport{font-family:inherit};</code>显示的继承。</p>
+<h2 id="指定替换字体"><a href="#指定替换字体" class="headerlink" title="指定替换字体"></a>指定替换字体</h2><p><strong>字体栈</strong> font stack 一般包含三种字体，当第一个字体在系统中没有找到时使用下一个字体。</p>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p><code>font-style: name</code></p>
+<p>name包含italic（斜体），oblique（倾斜斜体）normal（取消斜体）。</p>
+<h2 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h2><p><code>font-weight: name</code></p>
+<p>name中可选100～900数字，400正常粗细，700盒bold同样。可以直接设置bold为伪粗体。</p>
+<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>font-size</p>
+<p>rem单位 同em但是它相对于根元素变化大小，root em。</p>
+<p>em为父元素的多少倍。%类似。</p>
+<p>px为像素大小。</p>
+<p>预定义值：xx-small, x-small, small, medium, large, x-large, xx-large</p>
+<h2 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h2><p>line-height: num</p>
+<p>行高的值为数字，表示字体的大小的多少倍，无单位</p>
+<p>或者使用%比</p>
+<h2 id="font"><a href="#font" class="headerlink" title="font"></a>font</h2><p>font可以直接设置字体样式、粗细、变体、大小、行高和字体系列</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font</span>: <span class="selector-attr">[normal/italic/oblique]</span> <span class="selector-attr">[normal/bold/bolder/lighter/100]</span> <span class="selector-attr">[normal/small-caps]</span> <span class="selector-attr">[字体大小]</span> <span class="selector-attr">[/line-height]</span> <span class="selector-attr">[字体系列]</span>;</div></pre></td></tr></table></figure>
+<p>必须声明字体大小和系列，大小在前</p>
+<p>如果有行高，那么必须跟随字体大小，并且前面加／</p>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><p>color: name;</p>
+<h2 id="设置背景"><a href="#设置背景" class="headerlink" title="设置背景"></a>设置背景</h2><h3 id="修改文本的背景颜色"><a href="#修改文本的背景颜色" class="headerlink" title="修改文本的背景颜色"></a>修改文本的背景颜色</h3><p><code>background-color: transparent/color</code></p>
+<p>transparent 表示允许透过父元素的背景颜色。</p>
+<p>color表示背景颜色值。</p>
+<h3 id="设置背景图像"><a href="#设置背景图像" class="headerlink" title="设置背景图像"></a>设置背景图像</h3><p><code>background-image:url(omg.png)／none</code> none表示不使用</p>
+<h3 id="设置背景重复"><a href="#设置背景重复" class="headerlink" title="设置背景重复"></a>设置背景重复</h3><p><code>background-repeat:direction</code></p>
+<p>direction可以有四个值，repeat，repeat-x，repeat-y，no-repeat </p>
+<p>默认为repeat</p>
+<h2 id="设置背景图像是否滚动"><a href="#设置背景图像是否滚动" class="headerlink" title="设置背景图像是否滚动"></a>设置背景图像是否滚动</h2><p><code>background-attachment</code></p>
+<p>可选值友fixed／scroll </p>
+<p>fixed为固定</p>
+<p>scroll为滚动，是默认值。</p>
+<h3 id="设置背景位置"><a href="#设置背景位置" class="headerlink" title="设置背景位置"></a>设置背景位置</h3><p><code>background-position: x y;</code></p>
+<p>xy可以为npx，相对左上角位置。</p>
+<p>x的预定义值有left，center，right</p>
+<p>y的预定义值有top，center，bottom</p>
+<h2 id="设置字和字母间距"><a href="#设置字和字母间距" class="headerlink" title="设置字和字母间距"></a>设置字和字母间距</h2><p><code>word-spacing</code> <code>letter-spacing</code></p>
+<p>值为em或者px，如果是em，那么将继承使用父元素字体大小的em倍。</p>
+<p>两个声明会被子元素基础。</p>
+<p>normal或0可以取消设置。</p>
+<h2 id="设置缩进"><a href="#设置缩进" class="headerlink" title="设置缩进"></a>设置缩进</h2><p><code>text-indent</code> 设置段落第一行前缩进的距离。</p>
+<p>默认对em，strong，cite元素无效果，但是当display为block或者inline-block是就会产生效果。</p>
+<h2 id="对齐文本"><a href="#对齐文本" class="headerlink" title="对齐文本"></a>对齐文本</h2><p><code>text-align</code></p>
+<p>值为left，center，right</p>
+<h2 id="修改文本大小写"><a href="#修改文本大小写" class="headerlink" title="修改文本大小写"></a>修改文本大小写</h2><p><code>text-transform</code></p>
+<ul>
+<li>capitalize: 每个单词首字母大写。</li>
+<li>uppercase 每个字母大写</li>
+<li>lowercase 每个字母小写</li>
+<li>none 保持本地样式</li>
+</ul>
+<h2 id="使用小型大小字母"><a href="#使用小型大小字母" class="headerlink" title="使用小型大小字母"></a>使用小型大小字母</h2><p><code>font-variant</code>  将大些字母的大小变为和小写字母一样</p>
+<ul>
+<li>nome 原样输出</li>
+<li>small-caps 小型大写</li>
+</ul>
+<h2 id="装饰文本"><a href="#装饰文本" class="headerlink" title="装饰文本"></a>装饰文本</h2><p><code>text-decoration</code> 添加下划线等等</p>
+<ul>
+<li>underline 下划线</li>
+<li>overline 上划线</li>
+<li>line-through 删除线</li>
+<li>none</li>
+</ul>
+<h2 id="设置空白属性"><a href="#设置空白属性" class="headerlink" title="设置空白属性"></a>设置空白属性</h2><p>浏览器默认会讲空格去掉</p>
+<p><code>white-space</code>  可以规定如何处理空格</p>
+<ul>
+<li>pre 保留所有显示</li>
+<li>nowrap 保留空格，但是不会换行</li>
+<li>none 浏览器原本样式</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/04/html5andcss3base-09/" rel="next" title="html5andcss3base/09">
+                <i class="fa fa-chevron-left"></i> html5andcss3base/09
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/04/html5andcss3base-11/" rel="prev" title="html5andcss3base/11">
+                html5andcss3base/11 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="舒漫的" />
+          <p class="site-author-name" itemprop="name">舒漫的</p>
+          <p class="site-description motion-element" itemprop="description">副标题的简介是在不明白</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shumandi" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为文本添加样式"><span class="nav-number">1.</span> <span class="nav-text">为文本添加样式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择字体系列"><span class="nav-number">1.1.</span> <span class="nav-text">选择字体系列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指定替换字体"><span class="nav-number">1.2.</span> <span class="nav-text">指定替换字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜体"><span class="nav-number">1.3.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#粗体"><span class="nav-number">1.4.</span> <span class="nav-text">粗体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体大小"><span class="nav-number">1.5.</span> <span class="nav-text">字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行高"><span class="nav-number">1.6.</span> <span class="nav-text">行高</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#font"><span class="nav-number">1.7.</span> <span class="nav-text">font</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#颜色"><span class="nav-number">1.8.</span> <span class="nav-text">颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置背景"><span class="nav-number">1.9.</span> <span class="nav-text">设置背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文本的背景颜色"><span class="nav-number">1.9.1.</span> <span class="nav-text">修改文本的背景颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置背景图像"><span class="nav-number">1.9.2.</span> <span class="nav-text">设置背景图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置背景重复"><span class="nav-number">1.9.3.</span> <span class="nav-text">设置背景重复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置背景图像是否滚动"><span class="nav-number">1.10.</span> <span class="nav-text">设置背景图像是否滚动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置背景位置"><span class="nav-number">1.10.1.</span> <span class="nav-text">设置背景位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置字和字母间距"><span class="nav-number">1.11.</span> <span class="nav-text">设置字和字母间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置缩进"><span class="nav-number">1.12.</span> <span class="nav-text">设置缩进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对齐文本"><span class="nav-number">1.13.</span> <span class="nav-text">对齐文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文本大小写"><span class="nav-number">1.14.</span> <span class="nav-text">修改文本大小写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用小型大小字母"><span class="nav-number">1.15.</span> <span class="nav-text">使用小型大小字母</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰文本"><span class="nav-number">1.16.</span> <span class="nav-text">装饰文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置空白属性"><span class="nav-number">1.17.</span> <span class="nav-text">设置空白属性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">舒漫的</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
