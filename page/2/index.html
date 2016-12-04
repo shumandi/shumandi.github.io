@@ -355,29 +355,18 @@
       
         
           
-            <h1 id="操作表达式"><a href="#操作表达式" class="headerlink" title="操作表达式"></a>操作表达式</h1><h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><p>@import可以在css文件中引用其他文件</p>
-<p><code>&lt;link ref=&quot;stylesheet&quot; href=&quot;main.css&quot;/&gt;</code></p>
-<p>一个页面中如果出现多个link那么当发生声明冲突的时候，后面加载的将覆盖前面。</p>
-<p>media可以现在在不同显示设备上的输出。</p>
-<h2 id="嵌入样式表"><a href="#嵌入样式表" class="headerlink" title="嵌入样式表"></a>嵌入样式表</h2><p>在head元素中使用style元素包裹声明。</p>
-<p>当style出现在link后时才会覆盖前面的link。</p>
-<h2 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h2><p>在元素中使用style属性定义的样式。</p>
-<p>内联样式优先级最高，除了!important</p>
-<h2 id="样式的层叠顺序"><a href="#样式的层叠顺序" class="headerlink" title="样式的层叠顺序"></a>样式的层叠顺序</h2><ul>
-<li>link和style元素按先后顺序决定覆盖。</li>
-<li>内联样式优先级最高</li>
-<li>!important优先级最高 在任何时候</li>
-</ul>
-<h2 id="使用与媒体相关的样式"><a href="#使用与媒体相关的样式" class="headerlink" title="使用与媒体相关的样式"></a>使用与媒体相关的样式</h2><ol>
-<li><p>在link和style元素中使用属性media=“output”来规定在哪些设备上使用当前样式，output值可以为print, screen, all, aural, braille, handheld, projection, tty, tv</p>
-</li>
-<li><p>可以在样式表中使用@media，达到同样的效果。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> print&#123;</div><div class="line">  <span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">color</span>:red;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ol>
-
-          
+          操作表达式外部样式表@import可以在css文件中引用其他文件
+&lt;link ref=&quot;stylesheet&quot; href=&quot;main.css&quot;/&gt;
+一个页面中如果出现多个link那么当发生声明冲突的时候，后面加载的将覆盖前面。
+media可以现在在
+          ...
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/04/html5andcss3base-08/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -510,42 +499,19 @@
       
         
           
-            <h1 id="css构造块-lt-link-rel-quot-stylesheet-quot-href-quot-style-css-quot-gt"><a href="#css构造块-lt-link-rel-quot-stylesheet-quot-href-quot-style-css-quot-gt" class="headerlink" title="css构造块&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;"></a>css构造块<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></h1><p>[TOC]</p>
-<h2 id="构造样式规则"><a href="#构造样式规则" class="headerlink" title="构造样式规则"></a>构造样式规则</h2><h2 id="为样式规则添加注释"><a href="#为样式规则添加注释" class="headerlink" title="为样式规则添加注释"></a>为样式规则添加注释</h2><p><code>/****/</code></p>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>如果子元素中没有定义特殊的样式，那么它会继承父元素中的某些样式。</p>
-<p>会继承的样式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">1. 文本</div><div class="line"> * color (a元素除外)</div><div class="line"> * direction 方向</div><div class="line"> * font</div><div class="line"> * font-family 字体系列</div><div class="line"> * font-size 字体大小</div><div class="line"> * font-style 设置斜体</div><div class="line"> * font-variant 设置小型大写字体</div><div class="line"> * font-weight 粗体</div><div class="line"> * letter-spacing 字母间距</div><div class="line"> * line-height 行高</div><div class="line"> * text-align 字体对其方式</div><div class="line"> * text-indent 首行缩进</div><div class="line"> * text-transform 大小写转换</div><div class="line"> * visibility 可见性</div><div class="line"> * white-space 如何处理空格</div><div class="line"> * word-spacing 词间距</div><div class="line">2. 列表</div><div class="line"> * list-style 列表样式</div><div class="line"> * list-style-image 制定列表标记</div><div class="line"> * list-style-position 指定标记位置</div><div class="line"> * list-style-type 指定标记的类型</div><div class="line">3. 表格</div><div class="line"> * border-collapse 用于控制相邻的两个边框是否合并</div><div class="line"> * border-spacing 用于控制边框之间距离大小</div><div class="line"> * caption-side 表头位置</div><div class="line"> * empty-cells 是否显示表格中的空单元格</div><div class="line">4. 页面设置 （用于印刷物）</div><div class="line"> * orphans 用于设置当前元素内部发生分页时在底部保留行数</div><div class="line"> * page-break-inside 设置元素内部分页模式</div><div class="line"> * widows 设置元素发生分页时顶部保留行数</div><div class="line">5. 其他</div><div class="line"> * cursor 鼠标指针</div><div class="line"> * quotes 引号样式</div></pre></td></tr></table></figure>
-<h2 id="层叠：当规则发生冲突时"><a href="#层叠：当规则发生冲突时" class="headerlink" title="层叠：当规则发生冲突时"></a>层叠：当规则发生冲突时</h2><p>推荐使用外部样式表</p>
-<p>内连：在元素style属性中设置样式</p>
-<p>外部引用文件可以出现在page任意位置，但推荐倒入到head中。</p>
-<h3 id="特殊性"><a href="#特殊性" class="headerlink" title="特殊性"></a>特殊性</h3><p>选择器越特殊，规则就越强，在选择时就越会优先考虑。</p>
-<p>id&gt;class&gt;element</p>
-<h3 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h3><p>当特殊性无法区分时，在后面出现的选择器会有更加强的规则。</p>
-<h3 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h3><p>当以上两种都无法确定时使用!important 来声明这条属性的重要性</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">  <span class="attribute">color</span>:red <span class="meta">!important</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>不管样式出现在任何地方，他们首先比较的时重要性，当无法区分的时候才使用顺序方式来判定。内连为最高规则。但是important可以打破这一条规则。</p>
-<h2 id="属性的值"><a href="#属性的值" class="headerlink" title="属性的值"></a>属性的值</h2><p>虽然属性能接受的值的类型各不相同，但是有一些比较特殊的值类型。</p>
-<h3 id="inherit"><a href="#inherit" class="headerlink" title="inherit"></a>inherit</h3><p>这个值用来继承父元素的属性的值<code>color: inherit;</code>，这样元素久继承了父元素的color属性。</p>
-<h3 id="预定义的值"><a href="#预定义的值" class="headerlink" title="预定义的值"></a>预定义的值</h3><p>例如left，right，none这些值都不需要用双引号修饰。</p>
-<p>但是大多数的值都不需要用双引号包裹起来。</p>
-<h3 id="长度和百分数"><a href="#长度和百分数" class="headerlink" title="长度和百分数"></a>长度和百分数</h3><p>长度单位为px，百分数使用%</p>
-<p>em单位的大小由元素内的字体的大小决定nem表示字体的n倍。</p>
-<p>0一般不带单位。</p>
-<h3 id="纯数字"><a href="#纯数字" class="headerlink" title="纯数字"></a>纯数字</h3><p>只有极少数属性接受纯数字：line-height，z-index，opacity等。</p>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p><code>background: url(bg.png);</code></p>
-<h3 id="css颜色"><a href="#css颜色" class="headerlink" title="css颜色"></a>css颜色</h3><p><code>rgb(89,9,123)</code></p>
-<p><code>rgb(12%,24%,8%)</code></p>
-<p><code>#ffffff</code></p>
-<p>如果颜色由三对重复值出现<code>#f73</code> === <code>#ff7733</code></p>
-<p>以上都表示rgb颜色值</p>
-<p>其他颜色：</p>
-<ul>
-<li>RGBA <code>rgba(33,55,66,0.12)</code> 最后一位表示透明度</li>
-<li>HSL 色相hue，饱和度saturation， 亮度lightness。hue取值范围0～360，饱和度取值范围为0～100%。<code>property: hsl(hue, saturation, lightness)</code>  <code>color: hsl(33,45%,56%)</code></li>
-<li>HSLA <code>property: hsla(hue, saturation, lightness, alpha transparency)</code></li>
-</ul>
-
-          
+          css构造块&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;[TOC]
+构造样式规则为样式规则添加注释/****/
+继承如果子元素中没有定义特殊的样式，那么它会继承父元素中的某些样式。
+会继承的样式：
+1234567
+          ...
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/04/html5andcss3base-07/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -678,27 +644,20 @@
       
         
           
-            <h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>[TOC]</p>
-<p>分为目标和标签两种</p>
-<h2 id="创建指向另一个地址的链接"><a href="#创建指向另一个地址的链接" class="headerlink" title="创建指向另一个地址的链接"></a>创建指向另一个地址的链接</h2><p><code>&lt;a href=&quot;page.html&quot;&gt;page&lt;/a&gt;</code></p>
-<p>rel属性表示当前页面与href中的链接的关系，external表示外链的链接。</p>
-<p>title属性表解释性文字。</p>
-<h2 id="块级链接"><a href="#块级链接" class="headerlink" title="块级链接"></a>块级链接</h2><p>html5中a链接中的标签部分可以为几乎任意的html标签，当为一个p标签时，a链接将以块的形式显示。</p>
-<p>如果想添加背景，边框，内外边距，那么在css中应该<code>display: block</code>这样的形式将a变为一个块元素。</p>
-<p><em>target属性应该少用，应该由用户自己决定打开方式</em></p>
-<h2 id="创建锚并链接到锚"><a href="#创建锚并链接到锚" class="headerlink" title="创建锚并链接到锚"></a>创建锚并链接到锚</h2><p>id属性可以声明一个锚点</p>
-<p><code>&lt;a href=&quot;#main&quot;&gt;main&lt;/&gt;</code>跳转到id为main的锚上。</p>
-<p>如果锚点位于另外一个文档，那么<code>&lt;a href=&quot;page.html#main&quot;&gt;</code>这样的方式。</p>
-<h2 id="创建其他类型的链接"><a href="#创建其他类型的链接" class="headerlink" title="创建其他类型的链接"></a>创建其他类型的链接</h2><ul>
-<li>rss</li>
-<li>图像</li>
-<li>下载文件</li>
-<li>电子邮件地址 href=”maillto:xxxx@xxx.xxx”</li>
-<li>电话号码 href=”tel:+18000000000”</li>
-<li>……</li>
-</ul>
-
-          
+          链接[TOC]
+分为目标和标签两种
+创建指向另一个地址的链接&lt;a href=&quot;page.html&quot;&gt;page&lt;/a&gt;
+rel属性表示当前页面与href中的链接的关系，external表示外链的链接。
+title属性表解释性文字。
+块级链接html5中a链接
+          ...
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/04/html5andcss3base-06/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
