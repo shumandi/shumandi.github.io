@@ -105,7 +105,8 @@
 <meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午1.04.09.png">
 <meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午1.04.18.png">
 <meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午1.04.31.png">
-<meta property="og:updated_time" content="2016-12-06T05:42:56.000Z">
+<meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午2.46.24.png">
+<meta property="og:updated_time" content="2016-12-06T06:47:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单变量线性回归">
 <meta name="twitter:description" content="单变量线性回归Linner Regression with One Variable
@@ -370,6 +371,10 @@
 <li><p>h为我们期望的公式hypothesis ，本节中为<br>$$<br>h\theta(x)=\theta0+\theta_1<br>$$</p>
 </li>
 </ol>
+<h2 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h2><p>首先我们先看看代价函数的模样<br>$$<br>J(\theta_0,\theta<em>1)=\frac1{2m}\sum</em>{i=1}^m(h_\theta(x^{(i)})-y^{(i)}))^2<br>$$<br>J代表代价函数，这里的代价函数之时针对于线性回归函数的一个比较好的解。</p>
+<p>后面的h代表上一节中hypothesis得到的函数带入x^i后与原始的x对应y点的差</p>
+<p>为何需要代价函数？</p>
+<p>上一节中。我们获得了h，但是我们没有一个方法能够正确的求解出theta的值，那么，这时我们就需要曲线救国，用代价函数来替代h，从下图看。我们只需要求出使得j最小的点的值就能很好的表示我们数据。<img src="/uploads/STFML/屏幕快照 2016-12-06 下午2.46.24.png" alt="屏幕快照 2016-12-06 下午2.46.24"></p>
 
       
     </div>
@@ -537,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模型表示"><span class="nav-number">1.1.</span> <span class="nav-text">模型表示</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模型表示"><span class="nav-number">1.1.</span> <span class="nav-text">模型表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代价函数"><span class="nav-number">1.2.</span> <span class="nav-text">代价函数</span></a></li></ol></li></ol></div>
             
 
           </div>
