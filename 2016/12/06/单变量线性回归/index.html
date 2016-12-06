@@ -106,7 +106,11 @@
 <meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午1.04.18.png">
 <meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午1.04.31.png">
 <meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午2.46.24.png">
-<meta property="og:updated_time" content="2016-12-06T06:47:41.000Z">
+<meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午4.13.34.png">
+<meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午4.25.13.png">
+<meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午4.25.31.png">
+<meta property="og:image" content="https://shumandi.github.io/uploads/STFML/屏幕快照 2016-12-06 下午4.25.42.png">
+<meta property="og:updated_time" content="2016-12-06T08:29:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单变量线性回归">
 <meta name="twitter:description" content="单变量线性回归Linner Regression with One Variable
@@ -375,6 +379,19 @@
 <p>后面的h代表上一节中hypothesis得到的函数带入x^i后与原始的x对应y点的差</p>
 <p>为何需要代价函数？</p>
 <p>上一节中。我们获得了h，但是我们没有一个方法能够正确的求解出theta的值，那么，这时我们就需要曲线救国，用代价函数来替代h，从下图看。我们只需要求出使得j最小的点的值就能很好的表示我们数据。<img src="/uploads/STFML/屏幕快照 2016-12-06 下午2.46.24.png" alt="屏幕快照 2016-12-06 下午2.46.24"></p>
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><blockquote>
+<p>梯度下降是一个用来求最小值的方法，我们用梯度下降来求j的最小值</p>
+</blockquote>
+<p>$$<br>\theta_j:=\theta_j-\alpha\frac{d}{d\theta_j}J(\theta)<br>$$<br>导数的作用为求出J函数所在theta点的斜率，那么，当斜率为0的时候我们就能够得到最小的值。</p>
+<p>\alpha为学习率。如果a太小，那么我们要经过很多步的运算才能得到最小值，如果a太大，会跳过最小值，使得函数无法收敛。</p>
+<p>在上代价函数中，我们有两个theta，那么每次变化theta的值我们都要经过这样一个过程：</p>
+<p><img src="/uploads/STFML/屏幕快照 2016-12-06 下午4.13.34.png" alt="屏幕快照 2016-12-06 下午4.13.34"></p>
+<p>temp0为我们改变theta0的值，temp1为改变theta1后的值。最后两个一起改变。</p>
+<h2 id="梯度下降的线性回归"><a href="#梯度下降的线性回归" class="headerlink" title="梯度下降的线性回归"></a>梯度下降的线性回归</h2><p><img src="/uploads/STFML/屏幕快照 2016-12-06 下午4.25.13.png" alt="屏幕快照 2016-12-06 下午4.25.13"></p>
+<p>这是之前的梯度下降和线性回归的算法，结合之后为下图。</p>
+<p><img src="/uploads/STFML/屏幕快照 2016-12-06 下午4.25.31.png" alt="屏幕快照 2016-12-06 下午4.25.31"></p>
+<p><img src="/uploads/STFML/屏幕快照 2016-12-06 下午4.25.42.png" alt="屏幕快照 2016-12-06 下午4.25.42"></p>
+<p>最终我们得到这样的一个求值等式。</p>
 
       
     </div>
@@ -542,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模型表示"><span class="nav-number">1.1.</span> <span class="nav-text">模型表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代价函数"><span class="nav-number">1.2.</span> <span class="nav-text">代价函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模型表示"><span class="nav-number">1.1.</span> <span class="nav-text">模型表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代价函数"><span class="nav-number">1.2.</span> <span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降"><span class="nav-number">1.3.</span> <span class="nav-text">梯度下降</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降的线性回归"><span class="nav-number">1.4.</span> <span class="nav-text">梯度下降的线性回归</span></a></li></ol></li></ol></div>
             
 
           </div>
